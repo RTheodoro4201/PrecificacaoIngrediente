@@ -34,6 +34,15 @@ public class IngredienteRepository : IRepository<Ingrediente>
         await _dbConnection.ExecuteAsync(query, entity);
     }
 
+    /* TODO: Implementar método de atualização de quantidade em estoque automática
+    public async Task UpdateQuantidade(Ingrediente entity, decimal quantidade)
+    {
+        entity.QuantidadeEstoque = quantidade;
+        var query = "UPDATE Ingredientes SET QuantideEstoque = @QuantidadeEstoque WHERE Id = @Id";
+        await _dbConnection.ExecuteAsync(query, entity);
+    }
+    */
+
     public async Task Delete(int id)
     {
         await _dbConnection.ExecuteAsync("DELETE FROM Ingredientes WHERE Id = @Id", new { Id = id });

@@ -11,4 +11,7 @@ public class Ingrediente
 
     [Display(Name = "Unidade de medida")]
     public string? UnidadeMedida { get; set; }
+
+    [Display(Name = "Quantidade em estoque")]
+    public decimal QuantidadeEstoque { get; set; }
 }

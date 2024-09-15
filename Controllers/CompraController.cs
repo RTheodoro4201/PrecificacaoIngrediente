@@ -75,7 +75,9 @@ public class CompraController : Controller
         {
             try
             {
+                // TODO: var ingrediente = _ingredienteRepository.GetById(compra.IngredienteId);
                 await _compraRepository.Update(compra);
+                // TODO: await _ingredienteRepository.UpdateQuantidade(await ingrediente, compra.Quantidade);
             }
             catch (Exception)
             {
