@@ -14,12 +14,16 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.First().Id)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.First().Nome)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.First().UnidadeMedida)
             </th>
-            <th></th>
+            <th>
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -27,6 +31,9 @@
         @foreach (var ingrediente in Model)
         {
             <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => ingrediente.Id)
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => ingrediente.Nome)
                 </td>

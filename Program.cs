@@ -1,15 +1,14 @@
 using System.Data;
-using MySqlConnector;
+using Microsoft.Data.SqlClient;
 using Precificacao.Models;
 using Precificacao.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-string connectionString = @"Server=localhost;Port=3306;
-                        Database=cadastrodb;User=root;Password=";
+string connectionString = @"Server=RTHEODORO\LOCALHOST;Database=CadastroDb;user='user';password='174201';TrustServerCertificate=True;";
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IDbConnection>(sp => new MySqlConnection(connectionString));
+builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(connectionString));
 builder.Services.AddScoped<IRepository<Ingrediente>, IngredienteRepository>();
 builder.Services.AddScoped<IRepository<Compra>, CompraRepository>();
 

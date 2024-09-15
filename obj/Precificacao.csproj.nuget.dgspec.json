@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rodri\\Desktop\\Projetos\\POO II\\PrecificacaoIngrediente\\Precificacao.csproj": {}
+    "C:\\Users\\rodri\\Desktop\\Projetos\\Lab POO - 15-03\\PrecificacaoIngrediente\\Precificacao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rodri\\Desktop\\Projetos\\POO II\\PrecificacaoIngrediente\\Precificacao.csproj": {
+    "C:\\Users\\rodri\\Desktop\\Projetos\\Lab POO - 15-03\\PrecificacaoIngrediente\\Precificacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rodri\\Desktop\\Projetos\\POO II\\PrecificacaoIngrediente\\Precificacao.csproj",
+        "projectUniqueName": "C:\\Users\\rodri\\Desktop\\Projetos\\Lab POO - 15-03\\PrecificacaoIngrediente\\Precificacao.csproj",
         "projectName": "Precificacao",
-        "projectPath": "C:\\Users\\rodri\\Desktop\\Projetos\\POO II\\PrecificacaoIngrediente\\Precificacao.csproj",
+        "projectPath": "C:\\Users\\rodri\\Desktop\\Projetos\\Lab POO - 15-03\\PrecificacaoIngrediente\\Precificacao.csproj",
         "packagesPath": "C:\\Users\\rodri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rodri\\Desktop\\Projetos\\POO II\\PrecificacaoIngrediente\\obj\\",
+        "outputPath": "C:\\Users\\rodri\\Desktop\\Projetos\\Lab POO - 15-03\\PrecificacaoIngrediente\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rodri\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -41,6 +41,10 @@
             "Dapper": {
               "target": "Package",
               "version": "[2.1.35, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.0-preview1.24240.8, )"
             },
             "MySqlConnector": {
               "target": "Package",
