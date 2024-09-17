@@ -9,7 +9,7 @@ string connectionString = @"Server=RTHEODORO\LOCALHOST;Database=CadastroDb;user=
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<IDbConnection>(sp => new SqlConnection(connectionString));
-builder.Services.AddScoped<IRepository<Ingrediente>, IngredienteRepository>();
+builder.Services.AddScoped<IIngredienteRepository, IngredienteRepository>();
 builder.Services.AddScoped<IRepository<Compra>, CompraRepository>();
 
 

@@ -3,7 +3,7 @@ using Dapper;
 using Precificacao.Models;
 
 namespace Precificacao.Repositories;
-public class IngredienteRepository : IRepository<Ingrediente>
+public class IngredienteRepository : IIngredienteRepository
 {
     private readonly IDbConnection _dbConnection;
 
@@ -34,14 +34,13 @@ public class IngredienteRepository : IRepository<Ingrediente>
         await _dbConnection.ExecuteAsync(query, entity);
     }
 
-    /* TODO: Implementar método de atualização de quantidade em estoque automática
+
     public async Task UpdateQuantidade(Ingrediente entity, decimal quantidade)
     {
-        entity.QuantidadeEstoque = quantidade;
-        var query = "UPDATE Ingredientes SET QuantideEstoque = @QuantidadeEstoque WHERE Id = @Id";
+        entity.QuantidadeEstoque += quantidade;
+        var query = "UPDATE Ingredientes SET QuantidadeEstoque = @QuantidadeEstoque WHERE Id = @Id";
         await _dbConnection.ExecuteAsync(query, entity);
     }
-    */
 
     public async Task Delete(int id)
     {

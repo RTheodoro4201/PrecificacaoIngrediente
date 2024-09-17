@@ -5,13 +5,14 @@ using Precificacao.Repositories;
 public class CompraController : Controller
 {
     private readonly IRepository<Compra> _compraRepository;
-    private readonly IRepository<Ingrediente> _ingredienteRepository;
+    private readonly IIngredienteRepository _ingredienteRepository;
 
     public CompraController(
         IRepository<Compra> compraRepository,
-        IRepository<Ingrediente> ingredienteRepository
+        IIngredienteRepository ingredienteRepository
     )
     {
+
         _compraRepository = compraRepository;
         _ingredienteRepository = ingredienteRepository;
     }
@@ -48,6 +49,7 @@ public class CompraController : Controller
             }
 
             await _compraRepository.Add(compra);
+            await _ingredienteRepository.UpdateQuantidade(ingrediente, compra.Quantidade);
             return RedirectToAction(nameof(Index));
         }
         return View(compra);
@@ -75,9 +77,7 @@ public class CompraController : Controller
         {
             try
             {
-                // TODO: var ingrediente = _ingredienteRepository.GetById(compra.IngredienteId);
                 await _compraRepository.Update(compra);
-                // TODO: await _ingredienteRepository.UpdateQuantidade(await ingrediente, compra.Quantidade);
             }
             catch (Exception)
             {

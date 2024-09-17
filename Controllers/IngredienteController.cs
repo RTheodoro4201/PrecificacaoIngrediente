@@ -4,9 +4,9 @@ using Precificacao.Repositories;
 
 public class IngredienteController : Controller
 {
-    private readonly IRepository<Ingrediente> _ingredienteRepository;
+    private readonly IIngredienteRepository _ingredienteRepository;
 
-    public IngredienteController(IRepository<Ingrediente> ingredienteRepository)
+    public IngredienteController(IIngredienteRepository ingredienteRepository)
     {
         _ingredienteRepository = ingredienteRepository;
     }
